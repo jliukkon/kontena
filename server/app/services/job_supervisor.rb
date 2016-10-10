@@ -5,4 +5,5 @@ class JobSupervisor < Celluloid::SupervisionGroup
   supervise ServiceBalancerJob, as: :service_balancer_job
   supervise LeaderElectorJob, as: :leader_elector_job
   supervise AutoUpdaterJob, as: :auto_updater_job
+  supervise GridServiceHealthMonitorJob, as: :service_health_monitor_job
 end
